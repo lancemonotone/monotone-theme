@@ -1,0 +1,23 @@
+# Ignore node modules
+/node_modules
+
+# Ignore Composer dependencies
+/vendor
+
+# Ignore Sass cache
+.sass-cache
+
+# Ignore temporary files
+*.tmp
+*.swp
+*.bak
+*.log
+*.lock
+
+# Ignore build files
+/dist
+/build*
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
