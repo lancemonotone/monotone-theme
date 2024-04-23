@@ -1,8 +1,8 @@
 # Ignore node modules
-/node_modules
+node_modules
 
 # Ignore Composer dependencies
-/vendor
+vendor
 
 # Ignore Sass cache
 .sass-cache
@@ -15,8 +15,8 @@
 *.lock
 
 # Ignore build files
-/dist
-/build*
+dist
+build*
 
 # Ignore OS generated files
 .DS_Store

@@ -1,0 +1,248 @@
+.gform_wrapper {
+    li {
+        padding-inline-start: inherit !important;
+        background: none !important;
+    }
+}
+
+.layout {
+    .gform_legacy_markup_wrapper {
+        margin: 0;
+
+        input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
+        select,
+        textarea {
+            width: 100%;
+            padding: 1.6rem !important;
+            border-radius: var(--border-radius-min);
+            border: solid .2rem var(--gray-dark);
+            background: var(--background);
+            color: var(--text);
+
+            &:focus,
+            &.has-value {
+                outline-color: var(--primary-light);
+                background: var(--white);
+            }
+        }
+
+        ul.gform_fields:not(.top_label) {
+            .gfield_label {
+                position: relative;
+                display: block;
+                margin-bottom: 0.6rem;
+                float: none;
+                width: 100%;
+                text-align: left;
+                font-weight: 400;
+            }
+
+            .ginput_container:not(.ginput_container_time):not(.ginput_container_date) {
+                margin-left: 0 !important;
+                width: 100% !important;
+            }
+
+            .gfield_description {
+                margin-left: 0 !important;
+                padding-top: 0;
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+
+        .right_label {
+            input.medium,
+            textarea.medium {
+                width: 100%;
+            }
+        }
+
+        ul li.field_description_below div.ginput_container_radio {
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+
+            ul {
+                margin: 0 !important;
+            }
+        }
+
+        .gf_browser_chrome .gfield_radio li input[type=radio] {
+            margin-top: 0 !important;
+        }
+
+        .gfield_radio li {
+            display: flex;
+            align-items: center;
+
+            input[type=radio] {
+                margin-top: 0 !important;
+            }
+
+            label {
+                margin: 0 0 0 5px !important;
+            }
+        }
+
+        form ul.gform_fields.left_label li.gfield,
+        form ul.gform_fields.right_label li.gfield,
+        ul.gform_fields.left_label li.gfield,
+        ul.gform_fields.right_label li.gfield {
+            margin-top: 0;
+            margin-bottom: 2.6rem;
+        }
+
+        .gform_footer:not(.top_label) {
+            margin-left: 0 !important;
+            width: 100%;
+        }
+    }
+
+    .gform_wrapper.gravity-theme {
+        max-width: 66rem;
+        //margin-bottom: 4rem !important;
+
+        .gform_validation_errors,
+        .gform_validation_errors > h2,
+        .gfield_error .gfield_repeater_cell label,
+        .gfield_error label,
+        .gfield_error legend,
+        .gfield_validation_message,
+        .validation_message,
+        [aria-invalid=true] + label,
+        label + [aria-invalid=true],
+        .gfield_required {
+            color: var(--danger);
+            border-color: var(--danger);
+        }
+
+        .gf_progressbar_percentage.percentbar_blue {
+            background: var(--primary-light);
+        }
+
+        .gf_progressbar_wrapper {
+            margin-block-end: var(--spacer-short);
+
+            .gf_progressbar_title {
+                @extend .small-all-caps;
+                margin-block-end: var(--spacer-short);
+            }
+        }
+
+        // Self-Assessment Quiz
+        #gform_3 {
+            background-color: var(--white);
+            border-radius: var(--border-radius-max);
+            padding: 4.8rem 6.1rem;
+
+            .gform_page_footer {
+                display: grid;
+                justify-items: center;
+                gap: 1rem;
+                margin-block: var(--spacer-short);
+
+                @media screen and (min-width: 768px) {
+                    grid-template-columns: 1fr 1fr 2rem;
+                    justify-items: start;
+                }
+
+                img.gform_ajax_spinner {
+                    max-height: 2rem;
+                    align-self: center;
+                }
+
+                .gform_save_link,
+                .gform_previous_button {
+                    &.button {
+                        border-color: var(--accent);
+                        color: var(--accent);
+                        width: 100%;
+                        margin: 0;
+                    }
+                }
+
+                .gform_next_button {
+                    &.button {
+                        width: 100%;
+                        margin: 0;
+                    }
+                }
+
+                button + input,
+                input + button,
+                input + input {
+                    width: 100%;
+                    margin: 0;
+                }
+            }
+
+            .gfield_radio {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                margin-block: var(--spacer-short);
+
+                @media screen and (min-width: 768px) {
+                    flex-direction: row;
+                }
+
+                // Hide radio inputs visually but keep them accessible
+                .gfield-choice-input {
+                    position: absolute;
+                    opacity: 0;
+                    width: 0;
+                    height: 0;
+                }
+
+                .gfield-choice-input:checked + label {
+                    background-color: var(--accent);
+                    color: var(--white);
+                }
+
+                // Style labels to look like buttons
+                .gform-field-label {
+                    display: inline-flex;
+                    padding: 1.6rem 4rem;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    border-radius: var(--border-radius-min);
+                    border: 2px solid var(--accent);
+                    cursor: pointer;
+                    max-width: 100%;
+                    width: 100%;
+
+                    color: var(--accent);
+                    text-align: center;
+
+                    /* L-Nav */
+                    font-family: var(--font-sans);
+                    font-size: 2.8rem;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: .8;
+
+                    // Change appearance when radio button is checked
+                    &:hover {
+                        background-color: var(--accent);
+                        color: var(--white);
+                    }
+                }
+            }
+        }
+    }
+
+    // Quiz Results Page
+    .gquiz-field-choice {
+        ul {
+            @extend .override;
+        }
+        .gquiz-incorrect-response {
+            font-weight: 700;
+            color: var(--danger);
+        }
+        .gquiz-correct-response {
+            font-weight: 700;
+            color: var(--primary-light);
+        }
+    }
+}

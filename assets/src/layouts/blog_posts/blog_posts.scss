@@ -1,0 +1,200 @@
+.blog-posts {
+
+    &.first-post-full-width {
+        .card-container > :nth-child(1) {
+            --card-height-header: auto !important;
+            --card-height-body: auto !important;
+            grid-column: 1 / -1; /* Span the first card across all columns */
+        }
+    }
+
+    .pagination-posts {
+        text-align: center;
+        margin-block-start: var(--spacer-normal);
+        font-family: var(--font-sans);
+        display: flex;
+        gap: 1.2rem;
+        justify-content: center;
+
+        a {
+            text-decoration: none;
+        }
+
+        .current {
+            color: var(--accent);
+        }
+    }
+
+    .card {
+        .card-kicker {
+            a {
+                text-decoration: none;
+            }
+        }
+
+        &.has-white-background-color {
+            .card-heading a,
+            .card-kicker a {
+                text-decoration: none;
+                color: var(--text) !important;
+                border-block-end: none !important;
+
+                &:hover {
+                    color: var(--hover-color) !important;
+                }
+            }
+        }
+
+        .post-date {
+            margin-inline-end: 3rem;
+        }
+
+        &:not(.card-single-post) .card-body {
+            height: auto; /* Override the JS height calculation usually applied to cards bc these have line-clamp */
+            //display: -webkit-box; /* Required for the line-clamp to work */
+            //-webkit-box-orient: vertical;
+            //-webkit-line-clamp: 2; /* Limit to 2 lines */
+            //overflow: hidden; /* Hide the excess content */
+            //text-overflow: ellipsis; /* Show the ellipsis to indicate truncated text */
+        }
+
+        &.card-single-post {
+            & > .byline-social {
+                .card-kicker {
+                    margin-block-end: 0;
+                }
+            }
+
+            .post-footer {
+                margin-block-start: var(--spacer-normal);
+                border-block-start: 1px solid var(--primary-light);
+                padding-block-start: var(--spacer-normal);
+
+                & > * {
+                    max-width: var(--max-width-content);
+                }
+            }
+
+            .pagination-single-post {
+                --columns: 1fr;
+
+                @media screen and (min-width: 900px) {
+                    --columns: repeat(2, 1fr);
+                }
+
+                margin-block-start: var(--spacer-normal);
+                border-block-start: 1px solid var(--gray);
+                padding-block-start: var(--spacer-normal);
+
+                display: grid;
+                justify-content: space-between;
+                grid-template-columns: var(--columns);
+                gap: 4rem;
+
+                .nav-left, .nav-right {
+                    --icon-width: 3.6rem;
+                    --icon-height: 3.6rem; // Ensure both icons have the same height
+                    --icon-rotation: rotate(0deg);
+
+                    @media screen and (min-width: 900px) {
+                        --icon-width: 5.3rem;
+                        --icon-height: 5.2rem; // Use 52px to match the SVG's height
+                        &:hover {
+                            --icon-rotation: rotate(20deg) translate(3px, -1px);
+                        }
+                    }
+
+                    display: grid;
+                    column-gap: 2rem;
+                    text-decoration: none;
+                    line-height: 1.2;
+                    border-block-end: none !important;
+
+                    .card-link-icon {
+                        //height: var(--icon-width); // this prevents rolling effect if next line is commented out
+                        //height: var(--icon-height); // comment this out to remove the rolling effect
+                        //width: var(--icon-width);
+                        //min-width: var(--icon-width);
+                        transform: var(--icon-rotation);
+                        transition: all .2s ease-in-out;
+                    }
+
+                    svg {
+                        position: relative;
+                        display: block;
+                        max-width: 100%;
+                        height: auto;
+                    }
+                }
+
+                .nav-right {
+                    grid-template-columns: 1fr var(--icon-width);
+
+                    text-align: end; // Align content to the right
+                }
+
+                .nav-left {
+                    grid-template-columns: var(--icon-width) 1fr;
+
+                    .card-link-icon {
+                        transform: scaleX(-1) var(--icon-rotation); // Flip the SVG horizontally
+                    }
+                }
+            }
+        }
+
+        .external-link-card {
+            max-width: 50rem;
+        }
+    }
+
+    .byline-social {
+        display: grid;
+        grid-template-columns: 1fr auto; /* Byline takes remaining space, icons collapse to content size */
+        align-items: center; /* Aligns items vertically in the center */
+        margin-block-end: var(--spacer-normal);
+        border-block-end: 1px solid var(--primary-light);
+        padding-block-end: var(--spacer-short);
+        gap: 1rem; /* Spacing between byline and icons */
+
+        .social-media-icon-wrapper {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 1rem; /* Adjust the gap as needed */
+        }
+
+        @media (min-width: 500px) {
+            grid-template-columns: 1fr auto; /* Keep the 1fr and auto layout */
+
+            .social-media-icon-wrapper {
+                grid-template-columns: repeat(4, 1fr); /* Icons in one row, collapsing to their content size */
+                justify-self: end; /* Align the icon wrapper to the end (right side) */
+            }
+        }
+    }
+
+}
+
+.search {
+    .card {
+        .card-kicker {
+            a {
+                text-decoration: none;
+            }
+        }
+
+        &.has-white-background-color {
+            .card-heading a,
+            .card-kicker a {
+                text-decoration: none;
+                color: var(--text) !important;
+                border-block-end: none !important;
+
+                &:hover {
+                    color: var(--hover-color) !important;
+                }
+            }
+        }
+    }
+}
+

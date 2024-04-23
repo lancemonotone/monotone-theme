@@ -1,0 +1,114 @@
+:root {
+    --max-width-site: 1104px;
+    --max-width-site-wide: 1240px;
+    --max-width-content: 85rem;
+    --inner-padding: 2rem;
+    --transition: 0.15s cubic-bezier(1, -0.02, 1, 1);
+    --transition2: 0.4s ease-in-out;
+    --padding-block-end: clamp(2.25rem, 4vw, 3.375rem);
+    --spacer-normal: 5rem;
+    --spacer-tall: 8rem;
+    --spacer-short: 1.8rem;
+    --border-radius-max: 3rem;
+    --border-radius-min: 1rem;
+
+    @media screen and (min-width: 900px) {
+        --spacer-normal: 6rem;
+        --spacer-tall: 9.5rem;
+    }
+}
+
+body {
+    background-color: var(--background);
+    scroll-behavior: smooth !important;
+    outline-color: var(--accent);
+}
+
+div {
+    position: relative;
+}
+
+#content {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.inline-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    * {
+        margin: 0 !important;
+    }
+}
+
+/* adding this temporarily, but thinking this may stay */
+.primary-page-template {
+    position: relative;
+    padding: 6rem 0 10rem;
+
+    @media screen and (max-width: 767px) {
+        padding: 5rem 0 7rem;
+    }
+}
+
+main {
+    flex: 1 0 auto; /* This will make the main content grow as needed */
+}
+
+footer {
+    flex-shrink: 0; /* This will prevent the footer from shrinking */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.inner {
+    position: relative;
+    margin-inline: auto;
+    padding-inline: var(--inner-padding);
+    max-width: var(--max-width-site);
+}
+
+@import "../../scss/mixins/themes";
+.layout {
+    position: relative;
+    @include themes;
+}
+
+.pagination-list {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+
+    li {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        margin: 0;
+        padding: 0 5px;
+        list-style: none;
+
+        a,
+        .page-numbers {
+            font-family: var(--font-sans);
+            font-size: 1.6rem;
+            color: var(--gray-dark);
+            text-decoration: none;
+
+            &.current {
+               color: var(--accent);
+            }
+        }
+
+        a:focus {
+            outline: 2px solid #000;
+        }
+    }
+}

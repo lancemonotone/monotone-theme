@@ -1,0 +1,604 @@
+{
+    "key": "group_6386fe1497cff",
+    "title": "Monotone Page Builder",
+    "fields": [
+        {
+            "key": "field_6386fe144d772",
+            "label": "Page Modules",
+            "name": "template_flex_page",
+            "aria-label": "",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "layouts": {
+                "layout_64bad1dc71680": {
+                    "key": "layout_64bad1dc71680",
+                    "name": "intro_content",
+                    "label": "Full Width Intro Content",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_64bad366c91b5",
+                            "label": "Intro Content",
+                            "name": "intro_content",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_64bad2221a7d9"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_63f00f8936afa": {
+                    "key": "layout_63f00f8936afa",
+                    "name": "full_width_content",
+                    "label": "Full Width Content",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_63f00fe136afd",
+                            "label": "Full Width Content",
+                            "name": "full_width_content",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_641497975c07a"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_64de22990493c": {
+                    "key": "layout_64de22990493c",
+                    "name": "standard_full_card",
+                    "label": "Full Width Card",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_64de22ad0493f",
+                            "label": "Full Width Card",
+                            "name": "standard_full_card",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_64de20cdb0a5e"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_64de30e8a9a9a": {
+                    "key": "layout_64de30e8a9a9a",
+                    "name": "split_full_card",
+                    "label": "Full Width Split Card",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_64de30f6a9a9d",
+                            "label": "Full Width Split Card",
+                            "name": "split_full_card",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_654927d3af174"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_64d4ee88d4104": {
+                    "key": "layout_64d4ee88d4104",
+                    "name": "accordion_content",
+                    "label": "Full Width Accordion Content",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_64d4eec5d4107",
+                            "label": "Accordion Content",
+                            "name": "accordion_content",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_64beaa2de5beb"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_64dd17fa9b737": {
+                    "key": "layout_64dd17fa9b737",
+                    "name": "event_card",
+                    "label": "Full Width Event Card",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_64dd180b9b739",
+                            "label": "Event Card",
+                            "name": "event_card",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_64dd13dabc0f4"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_65b40d9b9c209": {
+                    "key": "layout_65b40d9b9c209",
+                    "name": "events_group",
+                    "label": "Full Width Events Group",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_65b40db29c20c",
+                            "label": "Events Group",
+                            "name": "events_group",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_65b40d278e1ee"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_64baad6943605": {
+                    "key": "layout_64baad6943605",
+                    "name": "full_width_card",
+                    "label": "Full Width Group",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_64baad6943607",
+                            "label": "Full Width Cards",
+                            "name": "full_width_card",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_64baac1fd14aa"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_63f010bf4db0a": {
+                    "key": "layout_63f010bf4db0a",
+                    "name": "card_grid",
+                    "label": "Half Width Group",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_63f010ca4db0c",
+                            "label": "Card Grid",
+                            "name": "card_grid",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_63de9c96d4e7e"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_6531503fcdc82": {
+                    "key": "layout_6531503fcdc82",
+                    "name": "third_width_card",
+                    "label": "Third Width Group",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6531506fcdc85",
+                            "label": "Third Width Cards",
+                            "name": "third_width_card",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_65314a4f7242b"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_64da71f024fc8": {
+                    "key": "layout_64da71f024fc8",
+                    "name": "two_column_content",
+                    "label": "Two Column Content",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_64da71f724fcb",
+                            "label": "Two Column Content",
+                            "name": "two_column_content",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_64da7159b6681"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_64dd18d9c838b": {
+                    "key": "layout_64dd18d9c838b",
+                    "name": "testimonial_content",
+                    "label": "Full Width Quote",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_64dd18e5c838e",
+                            "label": "Testimonial Content",
+                            "name": "testimonial_content",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_64dbd0b02ae5f"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_64e90cd296a01": {
+                    "key": "layout_64e90cd296a01",
+                    "name": "image",
+                    "label": "Full Width Image",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_64e90cdb96a04",
+                            "label": "Full Width Image",
+                            "name": "image",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_6555253235bc7",
+                                "field_65650496ff1e6",
+                                "field_6565051ddcb78",
+                                "field_6555254f35bc8",
+                                "field_64d6477f686b8"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_653c16057f688": {
+                    "key": "layout_653c16057f688",
+                    "name": "blog_posts",
+                    "label": "Blog Posts",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_653c16107f68b",
+                            "label": "Blog Posts",
+                            "name": "blog_posts",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_653c1626675fd"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_64badcc6dafd2": {
+                    "key": "layout_64badcc6dafd2",
+                    "name": "divider",
+                    "label": "Divider",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_64badcc6dafd3",
+                            "label": "Divider Height",
+                            "name": "divider_height",
+                            "aria-label": "",
+                            "type": "radio",
+                            "instructions": "The best way to space out modules on a page is to use this module or a spacer module.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "relevanssi_exclude": 0,
+                            "choices": {
+                                "standard": "Standard",
+                                "tall": "Tall"
+                            },
+                            "default_value": "standard",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "vertical",
+                            "save_other_choice": 0
+                        },
+                        {
+                            "key": "field_64badcf4dafd4",
+                            "label": "Divider Label",
+                            "name": "divider_label",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "When populated, this optional field shows a single line of text aligned to the bottom right of the divider line.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_64badc1f594d4": {
+                    "key": "layout_64badc1f594d4",
+                    "name": "spacer",
+                    "label": "Spacer ",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_64badc4ac0b26",
+                            "label": "Spacer Height",
+                            "name": "spacer_height",
+                            "aria-label": "",
+                            "type": "button_group",
+                            "instructions": "The best way to space out modules on a page is to use this module or a divider module.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "standard": "Standard",
+                                "tall": "Tall",
+                                "short": "Short"
+                            },
+                            "default_value": "standard",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "layout": "horizontal"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "min": "",
+            "max": "",
+            "button_label": "Add Layout"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "default"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-flex-page.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-flex-page-helpline.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1706303975
+}

@@ -1,0 +1,17 @@
+.standard-full-card {
+    @media screen and (min-width: 900px){
+        --card-padding: 4rem 4rem 6rem;
+    }
+
+    .card-heading,
+    .card-content {
+        max-width: var(--max-width-content);
+    }
+
+    @media screen and (min-width: 900px) {
+        .card-body p {
+            font-size: 2rem;
+            line-height: 150%;
+        }
+    }
+}

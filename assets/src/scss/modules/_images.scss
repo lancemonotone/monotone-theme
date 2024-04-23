@@ -1,0 +1,67 @@
+picture.background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    source {
+        display: none;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.wp-caption {
+    --text-left: 8rem;
+    --text-right: 1rem;
+    --caption-top: 3rem;
+    --caption-bottom: 6.2rem;
+
+    &.alignleft {
+        --text-left: 4rem;
+        --caption-left: 0;
+        --caption-right: 4rem;
+    }
+
+    &.alignright {
+        --text-left: 4rem;
+        --caption-left: 4rem;
+        --caption-right: 0;
+    }
+
+    &.aligncenter,
+    &.alignnone {
+        --text-left: 4rem;
+        --caption-left: auto;
+        --caption-right: auto;
+    }
+
+    margin-inline-start: var(--caption-left);
+    margin-inline-end: var(--caption-right);
+    margin-block-start: var(--caption-top);
+    margin-block-end: var(--caption-bottom);
+
+    img {
+        border-radius: var(--border-radius-max);
+    }
+
+    .wp-caption-text {
+        all: unset;
+
+        display: block;
+        color: var(--text);
+        font-family: var(--font-sans);
+        font-size: 1.3rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%; /* 14.4px */
+        margin-block-start: 2.5rem;
+        margin-inline-start: var(--text-left);
+        margin-inline-end: var(--text-right);
+    }
+}

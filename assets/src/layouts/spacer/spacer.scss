@@ -1,0 +1,12 @@
+.spacer {
+    position: relative;
+    height: var(--spacer-normal);
+
+    &.tall {
+        height: var(--spacer-tall);
+    }
+
+    &.short {
+        height: var(--spacer-short);
+    }
+}

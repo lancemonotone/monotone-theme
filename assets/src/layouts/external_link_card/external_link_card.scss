@@ -1,0 +1,222 @@
+//@import '../../scss/utility/typography';
+
+.external-link-card {
+    --icon-width: 36px;
+    --icon-rotation: rotate(0deg);
+    --svg-circle: var(--white);
+    --svg-arrow: var(--primary-light);
+    --card-padding: 2.5rem 3rem 3rem 3rem;
+
+    &.has-primary-dark-background-color {
+        --svg-arrow: var(--primary-dark);
+    }
+
+    &.has-primary-medium-background-color {
+        --svg-arrow: var(--primary-medium);
+    }
+
+    &.has-primary-light-background-color {
+        --svg-arrow: var(--primary-light);
+    }
+
+    &.has-secondary-dark-background-color {
+        --svg-arrow: var(--secondary-dark);
+    }
+
+    &.has-secondary-medium-background-color {
+        --svg-arrow: var(--secondary-medium);
+    }
+
+    &.has-white-background-color {
+        --svg-circle: var(--text);
+        --svg-arrow: var(--white);
+    }
+
+    &.has-accent-background-color {
+        --svg-arrow: var(--accent);
+    }
+
+    @media screen and (min-width: 900px) {
+        --icon-width: 53px;
+        --icon-height: 66px;
+        --card-padding: 3rem 4rem 4rem 4rem;
+
+        &:hover {
+            --icon-rotation: rotate(20deg);
+        }
+    }
+
+    .card-heading {
+        margin-bottom: 0;
+
+        &.header-sm {
+            font-size: clamp(1.5rem, 5vw, 2.6rem);
+        }
+    }
+
+    &.large-heading {
+        --card-padding: 2.4rem 7rem 5rem 3rem;
+        @media screen and (min-width: 900px) {
+            --card-padding: 2.8rem 12.8rem 7rem 4rem;
+        }
+
+        .card-heading {
+            @media screen and (min-width: 900px) {
+                font-size: 4.8rem;
+                padding-top: 0.5rem !important;
+            }
+        }
+    }
+
+    display: grid;
+    grid-template-columns: 1fr var(--icon-width);
+    grid-template-rows: auto; // This ensures rows are created based on content
+    align-items: start; // Aligns items to the start of each row
+    column-gap: 1rem;
+    @media screen and (min-width: 768px) {
+        column-gap: 4rem;
+    }
+    padding: var(--card-padding);
+    text-decoration: none !important;
+
+    .card-content-container {
+        display: grid;
+        row-gap: 2rem;
+    }
+
+    .card-link-icon {
+        height: var(--icon-width); // this prevents rolling effect if next line is commented out
+        height: var(--icon-height); // comment this out to remove the rolling effect
+        width: var(--icon-width);
+        transform: var(--icon-rotation);
+        transition: all 0.2s ease-in-out;
+
+        svg {
+            position: relative;
+            display: block;
+            max-width: 100%;
+            height: auto;
+            aspect-ratio: 1/1;
+
+            rect {
+                fill: var(--svg-circle);
+            }
+
+            path {
+                fill: var(--svg-arrow);
+            }
+        }
+    }
+
+    &.helpline-nav-card {
+        padding: 1.6rem 2rem;
+        background: var(--primary-medium-alt);
+
+
+        @media screen and (min-width: 900px) {
+            grid-template-columns: 1fr 3.6rem;
+            column-gap: 1rem;
+
+            .card-link-icon {
+                width: 3.6rem;
+            }
+
+            .card-content-container {
+                padding-left: 6.4rem;
+
+                .icon-wrap {
+                    left: -1.5rem;
+                }
+            }
+        }
+
+        h3 {
+            color: var(--white);
+        }
+
+        .card-link-icon {
+            height: auto;
+
+            svg path {
+                fill: var(--primary-medium-alt);;
+            }
+        }
+
+        .card-content-container {
+            padding-left: 6.4rem;
+            min-height: 5rem;
+
+            .icon-wrap {
+                position: absolute;
+                display: block;
+                width: 6.5rem;
+                height: 6.5rem;
+                left: -1rem;
+                top: -0.5rem;
+
+                svg {
+                    position: relative;
+                    display: block;
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+
+            .card-heading {
+                padding-right: 1rem;
+
+                span {
+                    display: block;
+                    font-size: 1.4rem;
+                    font-weight: 400;
+                    line-height: 200%;
+                }
+
+                @media screen and (min-width: 960px) {
+                    padding-right: 0;
+
+                    span {
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.helpline-nav-inner-sub-wrap {
+    .external-link-card {
+        &.helpline-nav-card {
+            @media screen and (min-width: 768px) {
+                .card-link-icon {
+                    width: 3.6rem;
+                }
+            }
+
+            @media screen and (min-width: 960px) {
+                padding: 3rem 2rem 3rem 3rem;
+            }
+
+            @media screen and (min-width: 1100px) {
+                .card-content-container {
+                    padding-left: 7.2rem;
+
+                    .icon-wrap {
+                        width: 9rem;
+                        height: 9rem;
+                        left: -2rem;
+                        top: -1.4rem;
+                    }
+
+                    .card-heading {
+                        padding-right: 0;
+
+                        span {
+                            font-size: 1.8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.inner:has( table ) {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    max-width: 100%;
+    min-width: 768px;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    .no-wrap {
+        //@media screen and (min-width: 768px) {
+            white-space: nowrap;
+        //}
+    }
+
+    td, th {
+        padding: .75rem 2rem;
+        vertical-align: top;
+    }
+
+    thead {
+        background: var(--gray-mid);
+
+        th {
+            @extend .small-all-caps;
+            text-align: left;
+            padding-block: 2rem;
+        }
+
+    }
+
+    tbody {
+        tr:first-child {
+            td {
+                padding-top: 3rem;
+            }
+        }
+    }
+}

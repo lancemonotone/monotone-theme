@@ -1,0 +1,46 @@
+// This could be updated to use the blockquote element styles instead of redefining them here.
+.testimonial-content {
+    --card-padding: 0;
+    --border-radius-max: 0;
+
+    .card {
+        display: grid;
+        grid-template-columns: 4rem 1fr;
+        grid-template-rows: 1fr auto;
+        column-gap: 1.8rem;
+        row-gap: 4rem;
+        max-width: 92.6rem;
+        padding-left: 1rem;
+    }
+
+    .card-link-icon {
+        grid-area: 1/1/1/1;
+        margin-block-start: 0.8rem;
+        background: var(--icon-quote) no-repeat top center;
+    }
+
+    .card-content {
+        grid-area: 1/2/1/-1;
+    }
+
+    .card-body p {
+        color: var(--primary-light);
+        font-family: var(--font-sans);
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%; /* 36px */
+    }
+
+    .card-heading {
+        grid-area: 2/2/-1/-1;
+
+        color: var(--text);
+        font-family: var(--font-sans);
+        font-size: clamp(1.5rem, 2vw, 2rem);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: 1px;
+    }
+}

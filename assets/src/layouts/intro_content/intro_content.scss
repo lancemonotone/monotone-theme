@@ -1,0 +1,32 @@
+.intro-content {
+    padding-top: 2rem;
+    
+    .inner > * {
+        max-width: 95rem;
+    }
+
+    .inner {
+        .header-lg,
+        .header-xl {
+            max-width: 81rem;
+        }
+    }
+
+    .card-kicker {
+        margin: 0 0 1.2rem;
+        @media screen and (min-width: 900px) {
+            margin: 0 0 2.4rem;
+        }
+    }
+
+    .card-body {
+        p {
+            font-size: 1.8rem;
+            line-height: 150%;
+
+            @media screen and (min-width: 768px) {
+                font-size: 2rem;
+            }
+        }
+    }
+}

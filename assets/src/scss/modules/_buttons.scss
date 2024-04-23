@@ -1,0 +1,218 @@
+@import "../mixins/buttons";
+
+.card-buttons {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    grid-auto-rows: min-content;
+    align-self: end;
+
+    &.inline {
+        @media screen and (min-width: 768px) {
+            display: flex;
+            white-space: nowrap;
+            gap: 1rem;
+            flex-wrap: wrap;
+            align-items: flex-end;
+        }
+    }
+}
+
+.button {
+    @include button;
+
+    &.slide {
+        background-color: var(--text);
+        border-radius: 0;
+        text-transform: uppercase;
+        font-size: clamp(1.8rem, 3vw, 2.4rem);
+        padding-inline: clamp(2.4rem, 3vw, 6rem);
+        margin-inline: 0;
+        border: 2px solid var(--text);
+        position: relative;
+        overflow: hidden;
+        transition: all var(--transition);
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 101%;
+            background: var(--accent);
+            transform: translate(-115%) skew(-20deg);
+            transition: transform var(--transition);
+            z-index: -1;
+        }
+
+        &:hover {
+            background-color: var(--text);
+            color: var(--text);
+
+            &::before {
+                transform: translate(-5%) skew(-20deg);
+            }
+        }
+
+        &.outlined {
+            background-color: var(--background);
+            color: var(--text);
+        }
+
+        svg {
+            display: none;
+        }
+    }
+
+    &.white {
+        background-color: var(--white);
+        color: var(--text);
+
+        &:hover {
+            background-color: var(--white);
+            color: var(--text);
+            border: 1px solid var(--primary-medium-alt);
+        }
+    }
+
+    &.transparent {
+        background-color: transparent;
+        color: var(--text);
+        border: 1px solid var(--primary-light);
+
+        &:hover {
+            background-color: var(--white);
+            color: var(--primary-light);
+        }
+    }
+}
+
+
+
+a.post-edit-link {
+    position: absolute;
+    top: var(--spacer-short);
+    right: var(--spacer-short);
+    display: none;
+    padding: 0.4rem 2rem 0.7rem;
+    z-index: 3;
+}
+
+*:hover > .post-edit-link {
+    display: block;
+}
+
+.large-button {
+    @include button;
+
+    --button-padding: .5rem 1.3rem .7rem;
+
+
+    @media screen and (min-width: 600px) {
+        --button-padding: .7rem 1.8rem 0.9rem;
+    }
+
+    @media screen and (min-width: 768px) {
+        --button-padding: 0.7rem 2.6rem 1.1rem;
+    }
+
+    padding: var(--button-padding);
+    background: var(--text);
+    color: var(--white);
+    font-weight: 400;
+    font-size: 2.4rem;
+    transition: all var(--transition);
+
+    .dropdown-icon {
+        position: relative;
+        display: inline-block;
+        width: 23px;
+        height: 17px;
+        margin-left: 0;
+
+        @media screen and (min-width: 600px) {
+            margin-left: 1.3rem;
+        }
+
+        .line {
+            position: absolute;
+            display: block;
+            width: 23px;
+            height: 3px;
+            left: 0;
+            top: 0;
+            background: var(--gray-mid);
+            opacity: 1;
+            transition: all var(--transition);
+        }
+
+        .line2 {
+            top: 7px;
+        }
+
+        .line3 {
+            top: 14px;
+        }
+    }
+
+    .button-text {
+        display: none;
+
+        @media screen and (min-width: 600px) {
+            display: inline;
+        }
+    }
+
+    &:hover {
+        background: var(--white);
+        color: var(--text);
+        border-color: var(--text);
+
+        .dropdown-icon {
+            .line {
+                background: var(--text);
+            }
+        }
+    }
+}
+
+body.primary-navigation-open {
+    .large-button {
+        background: var(--white);
+        color: var(--text);
+        border-color: var(--text);
+
+        .dropdown-icon {
+            .line {
+                background: var(--text);
+            }
+
+            .line2 {
+                opacity: 0;
+            }
+
+            .line1 {
+                transform: rotate(45deg);
+                top: 7px;
+            }
+
+            .line3 {
+                transform: rotate(-45deg);
+                top: 7px;
+            }
+        }
+
+        &:hover {
+            background: var(--text);
+            color: var(--white);
+
+            .dropdown-icon {
+                .line {
+                    background: var(--white);
+                }
+            }
+        }
+    }
+}

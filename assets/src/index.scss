@@ -1,0 +1,21 @@
+// Look in vite.config for global app styles
+//@import "dashicons/dashicons.css"; // this adds a LOT of weight
+@import 'scss/utility/normalize';
+@import 'scss/utility/a11y';
+@import 'scss/utility/theme';
+@import 'scss/utility/print';
+@import 'scss/utility/typography';
+@import 'scss/modules/global';
+@import 'scss/modules/front-page';
+@import 'scss/modules/images';
+@import 'scss/modules/utility-bar';
+@import 'scss/modules/header';
+@import 'scss/modules/footer';
+@import 'scss/modules/buttons';
+@import 'scss/modules/navigation';
+@import 'scss/modules/helpline-navigation';
+@import 'scss/modules/searchform';
+@import 'scss/modules/social';
+@import 'scss/modules/gravity-forms';
+@import 'scss/modules/events';
+@import 'scss/modules/tables';

@@ -1,0 +1,67 @@
+.third-width-card {
+    --card-columns: 1fr;
+
+    @media screen and (min-width: 900px) {
+        --card-columns: repeat(3, minmax(30%, 1fr));
+    }
+
+    &[class$="-background-color"] .card *:not(a) {
+        color: inherit !important;
+    }
+
+    .card-buttons {
+        margin-block-start: var(--spacer-normal);
+    }
+
+    .content-w-image-card {
+        .card-content {
+            margin-block-end: 0;
+        }
+    }
+
+    .external-link-card {
+        display: block;
+
+        &.heading-only {
+            --card-padding: 3rem 4rem;
+        }
+
+        .card-link-icon,
+        .card-content {
+            display: none;
+        }
+
+        .card-heading {
+            font-size: 1.8rem;
+            font-weight: normal;
+        }
+    }
+
+    .split-full-card {
+        &.content-w-image-card {
+            --row-gap: 3rem;
+            --grid-columns: 1fr;
+            --grid-rows: minmax(65%, auto) auto; /* Change to "auto auto" to have two rows of equal height */
+            --content-grid-area: 2 / 1 / 3 / 2; /* Start from row 2 and end at row 3 */
+            --image-grid-area: 1 / 1 / 2 / 2; /* Start from row 1 and end at row 2 */
+            --image-justify: center;
+            --image-align: center;
+
+            @media screen and (min-width: 900px) {
+                padding: 20px 30px 40px 30px;
+            }
+
+            .content-part {
+                text-align: center;
+            }
+
+            picture.background-container{
+                all: unset;
+            }
+
+            .card-kicker {
+                margin-block: 0;
+            }
+        }
+    }
+}

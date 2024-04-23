@@ -1,0 +1,68 @@
+.accordion-content {
+    .accordion {
+        position: relative;
+        margin-bottom: 1.8rem;
+        border-radius: var(--border-radius-max);
+        background: var(--white);
+
+        --padding-block-end: 0;
+
+        &[aria-expanded="true"] {
+            --padding-block-end: 3rem;
+            @media screen and (min-width: 900px) {
+                --padding-block-end: 4rem;
+            }
+        }
+
+        // remove the left transform from arrow lists
+        ol, ul {
+            &:not(.override) {
+                transform: none;
+            }
+        }
+
+        .accordion-label {
+            padding: 3rem;
+
+            @media screen and (min-width: 900px) {
+                padding: 4rem;
+            }
+        }
+
+        .accordion-content {
+            transition: none;
+            padding: 0 3rem var(--padding-block-end);
+
+            @media screen and (min-width: 900px) {
+                padding: 0 4rem var(--padding-block-end);
+            }
+        }
+
+        &:last-child {
+            margin-block-end: 0;
+        }
+
+        .accordion-label {
+            // Enable/override pointer-events: none; from accordion.scss
+            pointer-events: auto;
+            cursor: pointer;
+
+            //padding-block-end: var(--padding-block-end);
+
+            .drop-icon {
+                display: grid;
+            }
+
+            .accordion-header {
+                margin-block-end: 0;
+                font-size: clamp(2rem, 3vw, 3rem);
+                line-height: 108%;
+                font-weight: 400;
+            }
+        }
+
+        .two-column-content:not(:last-child) {
+            margin-block-end: var(--spacer-normal);
+        }
+    }
+}

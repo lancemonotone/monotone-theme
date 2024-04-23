@@ -1,0 +1,34 @@
+.full-width-content {
+    &.override-max-width {
+        .card-content {
+            max-width: none;
+        }
+    }
+
+    &.align-left {
+        .card-content {
+            margin-inline: 0 auto;
+        }
+    }
+
+    &.align-center {
+        .card-content {
+            margin-inline: auto;
+        }
+    }
+
+    &.align-right {
+        .card-content {
+            margin-inline: auto 0;
+        }
+    }
+
+    .inner > * {
+        max-width: var(--max-width-content);
+    }
+
+    p:last-child {
+        -webkit-margin-after: 3rem;
+        margin-block-end: 3rem;
+    }
+}

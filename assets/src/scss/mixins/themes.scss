@@ -1,0 +1,130 @@
+// for now, duplicated this as a utility class and placed in _global.scss as .primary-page-template-module-defaults
+@mixin themes {
+    // matt removed this
+    // padding-block-end: var(--padding-block-end);
+
+    // Briefly hide the content to prevent FOUC
+    opacity: 0;
+    animation-name: fade-in;
+    animation-duration: .1s;
+    animation-delay: .2s;
+    animation-timing-function: cubic-bezier(1, -.02, 1, 1);
+    animation-fill-mode: forwards;
+
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    &.has-background-background-color,
+    .has-background-background-color {
+        @include background-style(--background, true);
+    }
+
+    &.has-white-background-color,
+    .has-white-background-color {
+        @include background-style(--white, true);
+    }
+
+    &.has-primary-dark-background-color,
+    .has-primary-dark-background-color {
+        @include background-style(--primary-dark);
+    }
+
+    &.has-primary-medium-background-color,
+    .has-primary-medium-background-color {
+        @include background-style(--primary-medium);
+    }
+
+    &.has-primary-light-background-color,
+    .has-primary-light-background-color {
+        @include background-style(--primary-light);
+    }
+
+    &.has-accent-background-color,
+    .has-accent-background-color {
+        @include background-style(--accent, true);
+    }
+
+    .has-primary-dark-background-color:not(.layout),
+    .has-primary-medium-background-color:not(.layout),
+    .has-primary-light-background-color:not(.layout),
+    .has-primary-accent-background-color:not(.layout) {
+        color: var(--white) !important;
+
+        .card-heading {
+            color: var(--white) !important;
+        }
+    }
+}
+
+/**
+Mixin Definition: A mixin named background-style is defined, taking two parameters:
+
+$color: The color to be used for the background.
+$background-only: An optional boolean parameter that defaults to false. If set to true,
+ only the background-color property is set. If set to false, additional styling is applied.
+
+Mixin Logic:
+If $background-only is true, the mixin sets the background-color to the value of $color.
+
+If $background-only is false, the mixin does the following:
+ - Sets the background-color to the value of $color.
+ - Applies specific styling to child elements of the element using the mixin:
+ - Outlines and background colors for .button.
+ - Hover effects for these buttons.
+ - Styling for anchor tags without a class.
+ - Removing borders for anchor tags with .button or .red-button classes.
+ - Applying a filter effect to various elements inside .glider-dots, .glider-nav, and .button.arrow:before.
+
+Usage of Mixin: The class .has-accent-background-color includes the mixin background-style,
+passing --accent as the color and true as the value for $background-only. As a result, any
+element with the class .has-accent-background-color will have its background-color set to the
+value of the CSS variable --accent.
+ */
+@mixin background-style($color, $background-only: false) {
+    @if $background-only {
+        background-color: var($color);
+    } @else {
+        background-color: var($color);
+
+        * {
+            color: var(--white);
+
+            a:not(.button):not(.card) {
+                color: var(--white) !important;
+                //border-block-end: 1px solid;
+
+                &:hover {
+                    color: var(--white) !important;
+                    border-block-end: 1px dashed var(--white) !important;
+                }
+            }
+
+            .button {
+                outline-color: var(--white);
+                background-color: var(--white);
+                color: var(--text);
+
+                &:hover {
+                    background-color: var(--white);
+                    color: var($color);
+                }
+            }
+
+            a.button {
+                border: none;
+            }
+
+            .glider-dots *,
+            .glider-nav *,
+            .button.arrow:before {
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
+}

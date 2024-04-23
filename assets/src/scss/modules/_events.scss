@@ -1,0 +1,395 @@
+.timely {
+    font-family: var(--font-sans);
+}
+
+.timely .ai1ec-nav > li > a:hover,
+.timely .ai1ec-nav > li > a:active,
+.timely .ai1ec-nav > li > a:focus {
+    background-color: transparent;
+}
+
+.timely {
+    .ai1ec-btn-sm,
+    .ai1ec-btn-group-xs > .ai1ec-btn {
+        padding: 15px;
+        border-radius: var(--border-radius-min);
+        font-size: 1.3rem;
+    }
+
+    .ai1ec-btn-primary {
+        background-color: var(--primary-light);
+        border-color: var(--primary-light);
+        color: var(--white);
+
+        &:hover {
+            background-color: var(--primary-dark);
+            border-color: var(--primary-dark);
+        }
+    }
+
+    // Category Filter
+    .ai1ec-calendar-toolbar {
+        background-color: var(--primary-light);
+        display: inline-block;
+        border-radius: var(--border-radius-min);
+    }
+
+    .ai1ec-nav-pills > li > a,
+    .ai1ec-nav-pills > li > a:hover,
+    .ai1ec-nav-pills > li > a:focus {
+        color: var(--white) !important;
+        background-color: var(--primary-light) !important;
+    }
+}
+
+#ai1ec-container.ai1ec-main-container {
+    --hover-color: var(--primary-light);
+
+    // CALENDAR PAGE
+    .ai1ec-btn-toolbar {
+        .ai1ec-btn-group.ai1ec-btn-group-xs {
+            margin-block-start: 0;
+        }
+    }
+
+    a.ai1ec-btn.ai1ec-btn-sm.ai1ec-btn-default.ai1ec-dropdown-toggle {
+        z-index: 1;
+    }
+
+    .ai1ec-btn-group {
+        margin-inline-start: 0;
+
+        & > .ai1ec-btn:first-child:not(:last-child):not(.ai1ec-dropdown-toggle) {
+            border-bottom-right-radius: 0;
+            border-top-right-radius: 0;
+        }
+
+        & > .ai1ec-btn:not(:first-child):not(:last-child):not(.ai1ec-dropdown-toggle) {
+            border-radius: 0;
+        }
+
+        & > .ai1ec-btn:last-child:not(:first-child):not(.ai1ec-dropdown-toggle) {
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+        }
+    }
+
+    // Month Picker
+    .ai1ec-pagination {
+        .ai1ec-calendar-title,
+        .ai1ec-calendar-title-short {
+            font-size: 1.4rem;
+        }
+
+        & > .ai1ec-btn {
+            text-transform: none;
+        }
+    }
+
+    .ai1ec-nav {
+        .ai1ec-dropdown {
+            padding: 0;
+            font-family: var(--font-sans);
+
+            i {
+                display: none;
+            }
+
+            .ai1ec-dropdown-toggle {
+                font-weight: 700;
+                letter-spacing: .04rem;
+            }
+
+            .ai1ec-caret {
+                border-width: 5px 5px 0;
+                margin-inline-start: 1.5rem;
+            }
+        }
+    }
+
+    .ai1ec-agenda-widget-view,
+    .ai1ec-agenda-view {
+        .ai1ec-date {
+            background: var(--white);
+            border-radius: var(--border-radius-min);
+            margin-block-end: 1.8rem;
+
+            .ai1ec-date-title {
+                border: none;
+                background: var(--primary-light);
+                width: clamp(5rem, 17vw, 9rem);
+                padding-block: 0;
+
+                &:hover {
+                    background: var(--primary-dark);
+                }
+            }
+
+            .ai1ec-month,
+            .ai1ec-day,
+            .ai1ec-weekday,
+            .ai1ec-year {
+                text-shadow: none;
+                color: var(--white);
+            }
+
+            .ai1ec-month {
+                font-size: 1.2rem;
+                font-weight: normal;
+                padding-block-start: .5rem;
+                letter-spacing: .1rem;
+                background: transparent;
+            }
+
+            .ai1ec-day {
+                font-size: 4rem;
+                padding: 0;
+                line-height: 116%;
+            }
+
+            .ai1ec-weekday {
+                text-transform: uppercase;
+                font-size: 1.2rem;
+                font-weight: normal;
+                padding: 0;
+            }
+
+            .ai1ec-year {
+                background: var(--primary-medium);
+                margin-block-start: 0.5rem;
+                border-radius: .5rem;
+                padding-block: 1rem;
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+    .ai1ec-agenda-view {
+        margin-block-start: 1.8rem;
+
+        // Event Listing
+        .ai1ec-event {
+            background: transparent;
+            border: none;
+            box-shadow: none;
+
+            * {
+                margin: 0;
+            }
+
+            .ai1ec-event-header {
+                display: grid;
+                gap: 1rem 2rem;
+                grid-template-areas:
+                        "title"
+                        "time"
+                        "actions"
+                        "toggle";
+
+                @media screen and (min-width: 600px) {
+                    grid-template-areas:
+                        "title actions"
+                        "time toggle"
+                        "edit edit";
+                    gap: 1rem 5rem;
+                    grid-template-columns: 1fr auto;
+                }
+            }
+
+            .ai1ec-event-title {
+                grid-area: title;
+                color: var(--text);
+                font-size: 2rem;
+                line-height: 100%;
+
+                &:hover {
+                    color: var(--primary-light);
+                }
+            }
+
+            .ai1ec-event-time {
+                grid-area: time;
+                font-family: var(--font-serif);
+                font-size: 1.6rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 170%;
+                opacity: 1;
+            }
+
+            // Buy Tickets Button
+            .ai1ec-sas-actions {
+                grid-area: actions;
+                align-self: start;
+                width: 180px;
+
+                .ai1ec-btn {
+                    @include button;
+                    width: 100%;
+
+                    // fix for mobile
+                    padding-block: 1rem;
+                    @media screen and (min-width: 600px) {
+                        padding-block: 1.2rem;
+                    }
+
+                    &:hover {
+                        color: var(--accent) !important;
+                    }
+
+                    i {
+                        display: inline-block;
+                        @media screen and (min-width: 600px) {
+                            display: none;
+                        }
+                    }
+
+                    span {
+                        display: none;
+                        @media screen and (min-width: 600px) {
+                            display: inline !important;
+                        }
+                    }
+                }
+            }
+
+            // Expand Content Button
+            .ai1ec-event-toggle {
+                grid-area: toggle;
+                @include button;
+
+                // fix for mobile
+                padding-block: 1rem;
+                @media screen and (min-width: 768px) {
+                    padding-block: 1.2rem;
+                }
+
+                font-size: 1.5rem;
+                background: var(--white);
+                color: var(--text);
+                border-color: var(--text);
+                max-height: 4.2rem;
+                width: 180px;
+                align-self: self-start;
+            }
+
+            .post-edit-link {
+                display: none;
+                @media screen and (min-width: 600px) {
+                    display: block;
+                    grid-area: edit;
+                    position: relative;
+                    justify-self: end;
+                    padding: 1rem;
+                    inset: auto;
+                    //opacity: 1;
+                    //filter: alpha(opacity=100);
+                }
+            }
+        }
+    }
+
+    .ai1ec-event-summary {
+
+        .ai1ec-event-description {
+            margin-block-start: 2rem;
+            @media screen and (min-width: 600px) {
+                margin-block-start: 0;
+            }
+
+            p {
+                margin-block: 1rem;
+            }
+
+            ul {
+                margin-block: 1rem;
+                padding-inline-start: 1rem;
+            }
+        }
+
+        .ai1ec-btn {
+            @include button;
+            width: 100%;
+            padding-block: 1rem;
+            font-size: 1.5rem;
+            background: var(--white);
+            color: var(--text);
+            border-color: var(--text);
+            max-height: 4.2rem;
+            padding-inline: 1rem;
+            @media screen and (min-width: 600px) {
+                padding-inline: 4rem;
+            }
+        }
+
+        .ai1ec-categories i {
+            display: none;
+        }
+    }
+
+}
+
+// SINGLE EVENT PAGE
+.ai1ec-single-event {
+    .ai1ec-event-details {
+        .ai1ec-field-label {
+            width: 10rem;
+            color: var(--gray-dark);
+        }
+
+        a {
+            border: none !important;
+            padding: 0 !important;
+            background: none !important;
+        }
+    }
+
+    .ai1ec-actions {
+        margin-left: 5rem;
+        margin-block-end: 10%;
+        z-index: 1;
+    }
+
+    .ai1ec-btn-group-vertical {
+        margin-block-end: 0 !important;
+
+        .ai1ec-btn {
+            border-radius: var(--border-radius-min) !important;
+            margin-block-end: 2rem;
+            font-size: 1.4rem;
+            text-align: center;
+            border: none;
+
+            &:active,
+            &:focus {
+                background-color: var(--primary-medium) !important;
+                color: var(--white) !important;
+            }
+        }
+    }
+
+    .ai1ec-subscribe-dropdown {
+        & > span {
+            padding: 15px;
+        }
+
+        .ai1ec-caret {
+            display: none;
+        }
+
+        .ai1ec-dropdown-menu {
+            padding: 1rem 1rem 2rem !important;
+            border-radius: var(--border-radius-min);
+            border: none;
+            margin-block-start: 1rem;
+
+            li {
+                font-size: 1.3rem;
+                background: none;
+                padding-inline-start: 0;
+                margin: 1rem 0;
+                font-family: var(--font-sans);
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+.event-card {
+    .split-full-card {
+        --image-part-padding: 4rem 4rem 7rem;
+        --image-display: block;
+        --content-grid-area: unset;
+        --image-grid-area: 1/1/4/1;
+        --content-start: -5rem;
+
+        @media screen and (min-width: 768px) {
+            --image-part-padding: 4rem 8rem 4rem 4rem;
+            --content-grid-area: 1 / 5 / 1 / -1;
+            --image-grid-area: 1 / 1 / 1 / span 5;
+            --content-start: 0;
+        }
+    }
+
+    .content-part {
+        margin-block-start: var(--content-start);
+
+        &.has-white-background-color {
+            .card-heading a,
+            .card-kicker a {
+                text-decoration: none;
+                color: var(--text) !important;
+
+                &:hover {
+                    color: var(--hover-color) !important;
+                    border: none !important;
+                }
+            }
+        }
+    }
+
+    .image-part {
+        padding: var(--image-part-padding);
+    }
+
+    .event-date {
+        margin-block-end: var(--spacer-normal);
+        &:last-child {
+            margin-block-end: 0;
+        }
+
+        .large-line {
+            margin-bottom: 2.4rem;
+        }
+
+        .header-sm {
+            font-size: 2.7rem;
+            margin-bottom: 2.5rem;
+        }
+    }
+}
