@@ -3,7 +3,7 @@
   <img src="logo.jpg" width="400" />
 </div>
 
-Monotone is a flexible, block-based WordPress theme that leverages the power of Advanced Custom Fields (ACF) for layout configuration. It uses a modern Vite build system and provides a variety of
+Monotone is a flexible, modular WordPress theme that leverages the power of Advanced Custom Fields (ACF) for layout configuration. It uses a modern Vite build system and provides a variety of
 theme color options, including a high-contrast mode for accessibility. All fonts are served directly from the theme directory, ensuring a consistent and fast user experience.
 
 ## Features
